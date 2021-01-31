@@ -15,6 +15,7 @@ export function useCountriesApiContext() {
 
 export function CountriesProvider({ children }) {
   const [selectedCountries, setSelectedCountries] = useState([])
+  const [isSelectedCountriesLoading, setIsSelectedCountriesLoading] = useState([])
   const [isAlertActive, setIsAlertActive] = useState(false)
 
   async function addCountry(country) {
@@ -41,10 +42,13 @@ export function CountriesProvider({ children }) {
 
   async function loadSavedCountriesList() {
     try {
+      setIsSelectedCountriesLoading(true)
       const list = await loadSavedCountriesData()
       setSelectedCountries(list)
+      setIsSelectedCountriesLoading(false)
     } catch (err) {
       setIsAlertActive(true)
+      setIsSelectedCountriesLoading(false)
     }
   }
 
@@ -52,6 +56,7 @@ export function CountriesProvider({ children }) {
     if (!name) return []
 
     try {
+      setIsSelectedCountriesLoading(true)
       return await getCountrySearchCountriesData(name)
     } catch (err) {
       setIsAlertActive(true)
@@ -66,6 +71,7 @@ export function CountriesProvider({ children }) {
     addCountry,
     removeCountry,
     loadSavedCountriesList,
+    isSelectedCountriesLoading
   }
 
   return (

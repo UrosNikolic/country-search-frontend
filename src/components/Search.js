@@ -33,6 +33,7 @@ export default function Search() {
 
   return (
     <div className='w-50 flex-grow-1 pr-2'>
+      <h4>Country Search</h4>
       <input
         type='text'
         className='form-control w-100'
