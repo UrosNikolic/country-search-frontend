@@ -56,7 +56,6 @@ export function CountriesProvider({ children }) {
     if (!name) return []
 
     try {
-      setIsSelectedCountriesLoading(true)
       return await getCountrySearchCountriesData(name)
     } catch (err) {
       setIsAlertActive(true)
