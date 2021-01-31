@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- node 14.5 or higher
+- node 14.15 or higher
 
 ## How to run
 
