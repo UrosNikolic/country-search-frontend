@@ -10,3 +10,6 @@
 2. add environment variable values to .env file
 3. run ```npm intall```
 4. run ```npm start```
+
+# Note
+Api is hosted and .env values will be provided
