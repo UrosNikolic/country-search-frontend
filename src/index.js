@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import ListSearchApp from './ListSearchApp'
 
 import './index.scss'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ListSearchApp />
   </React.StrictMode>,
   document.getElementById('root')
 )

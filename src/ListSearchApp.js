@@ -4,7 +4,7 @@ import Search from './components/Search'
 import SelectedCountries from './components/SelectedCountries'
 import { CountriesProvider } from './context/CountriesContext'
 
-const App = () => {
+const ListSearchApp = () => {
   return (
     <CountriesProvider>
       <div className='container px-0'>
@@ -20,4 +20,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default ListSearchApp;
