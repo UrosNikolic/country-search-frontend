@@ -21,7 +21,7 @@ export default function Search() {
 
     try {
       setIsLoading(true)
-      const countries = await loadCountries(countryName)
+      const countries = await loadCountries(countryName.trim())
       setCountryList(countries)
       setIsLoading(false)
     } catch (err) {

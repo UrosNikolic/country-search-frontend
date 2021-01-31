@@ -49,6 +49,8 @@ export function CountriesProvider({ children }) {
   }
 
   async function loadCountries(name) {
+    if (!name) return []
+
     try {
       return await getCountrySearchCountriesData(name)
     } catch (err) {
