@@ -1,10 +1,10 @@
-#Country Search App
+# Country Search App
 
-##Requirements
+## Requirements
 
 - node 14.5 or higher
 
-##How to run
+## How to run
 
 1. copy .env.sample and create .env file
 2. add environment variable values to .env file
