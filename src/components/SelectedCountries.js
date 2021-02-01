@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import CountryListItem from './CountryListItem'
 import { useCountriesApiContext } from '../context/CountriesContext'
-import Loader from "./Loader";
+import Loader from './Loader'
 
 export default function SelectedCountries() {
   const {
@@ -41,7 +41,8 @@ export default function SelectedCountries() {
         )
       }
       {
-        !isSelectedCountriesLoading && !selectedCountries.length &&
+        !isSelectedCountriesLoading &&
+        !selectedCountries.length &&
         (
           <p className='lead'>
             There are no saved countries
